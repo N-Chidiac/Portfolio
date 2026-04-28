@@ -50,4 +50,10 @@ const router = createRouter({
   ],
 });
 
+router.beforeEach((to, from) => {
+  if (from.name && from.name !== "menu") {
+    router.previousRoute = from.fullPath;
+  }
+});
+
 export default router;
