@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import TheHeader from "@/components/TheHeader.vue";
+</script>
+
 <template>
-  <h1>home</h1>
+  <TheHeader>
+    <template #title>NOUR CHIDIAC</template>
+    <template #subtitle>WEB-DEVELOPER</template>
+  </TheHeader>
+  <h1>Home</h1>
 </template>

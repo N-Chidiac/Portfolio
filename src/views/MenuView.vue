@@ -113,6 +113,15 @@ function close() {
   margin-right: 1rem;
 }
 
+h4 {
+  font-family: var(--subtitle-font);
+  font-weight: 500;
+  font-style: medium;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
 .links {
   display: flex;
   flex-direction: column;
@@ -130,8 +139,12 @@ function close() {
 
 .links h1 {
   margin: 0;
-  line-height: 1.1;
+  line-height: 100%;
   font-size: 64px;
+  font-family: var(--subtitle-font);
+  font-weight: 700;
+  font-style: bold;
+  letter-spacing: 0%;
 }
 
 .socials {
