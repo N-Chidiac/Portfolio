@@ -78,4 +78,57 @@ header {
     }
   }
 }
+
+@media (max-width: 1024px) {
+  header {
+    height: 320px;
+  }
+
+  .nav {
+    padding: 35px 40px;
+  }
+
+  .hero-logo {
+    height: 180px;
+    width: 267px;
+  }
+
+  .title-container {
+    .title h1 {
+      font-size: 72px;
+    }
+    .subtitle h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    height: 240px;
+  }
+
+  .nav {
+    padding: 24px 24px;
+  }
+
+  .nav img {
+    height: 28px;
+    width: auto;
+  }
+
+  .hero-logo {
+    height: 120px;
+    width: 178px;
+  }
+
+  .title-container {
+    .title h1 {
+      font-size: 42px;
+    }
+    .subtitle h2 {
+      font-size: 16px;
+    }
+  }
+}
 </style>
