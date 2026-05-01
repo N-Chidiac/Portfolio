@@ -25,3 +25,19 @@
 body {
   background-color: var(--primary-color);
 }
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}

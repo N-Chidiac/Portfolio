@@ -47,6 +47,11 @@ const router = createRouter({
       name: "wpl",
       component: () => import("@/views/WplView.vue"),
     },
+    {
+      path: "/privacy",
+      name: "privacy-policy",
+      component: () => import("@/views/WplView.vue"),
+    },
   ],
 });
 
