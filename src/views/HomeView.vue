@@ -105,6 +105,7 @@ const recentProjects = computed(() =>
             :title="project.name"
             :subtitle="project.type"
             :image="getImage(project.image)"
+            class="project-card"
           />
         </div>
       </div>
@@ -217,6 +218,9 @@ p {
   flex-wrap: wrap;
   gap: 60px;
   justify-content: center;
+}
+.project-card:hover {
+  box-shadow: 4px 4px 8px #4e765d;
 }
 
 @media (max-width: 1024px) {

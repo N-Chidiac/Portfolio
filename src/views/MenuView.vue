@@ -25,11 +25,11 @@ function close() {
       <div class="nav-and-socials">
         <nav class="links">
           <RouterLink to="/home"><h1>HOME</h1></RouterLink>
-          <RouterLink to="/projects"><h1>PROJECTS</h1></RouterLink>
           <RouterLink to="/about"><h1>ABOUT</h1></RouterLink>
-          <RouterLink to="/contact"><h1>CONTACT</h1></RouterLink>
-          <RouterLink to="/facts"><h1>FUN FACTS</h1></RouterLink>
+          <RouterLink to="/projects"><h1>PROJECTS</h1></RouterLink>
           <RouterLink to="/wpl"><h1>WPL</h1></RouterLink>
+          <RouterLink to="/facts"><h1>FUN FACTS</h1></RouterLink>
+          <RouterLink to="/contact"><h1>CONTACT</h1></RouterLink>
         </nav>
         <div class="socials">
           <a href="https://github.com/N-Chidiac" target="_blank">
