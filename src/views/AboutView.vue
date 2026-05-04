@@ -1,6 +1,7 @@
 <script setup>
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeader from "@/components/TheHeader.vue";
+import TheButton from "@/components/TheButton.vue";
 </script>
 
 <template>
@@ -75,6 +76,9 @@ import TheHeader from "@/components/TheHeader.vue";
           waarbij ik nieuwe frameworks, tools en programmeertalen verken. Op die manier blijf ik
           mezelf continu uitdagen en mijn technische vaardigheden verder ontwikkelen.
         </p>
+        <div class="btn">
+          <TheButton text="Contact me" color="#4e765d" path="/contact" />
+        </div>
       </div>
       <div class="img-container">
         <img src="../assets/about-me/paint-pallete.png" alt="image of a paint pallette" />
@@ -127,6 +131,10 @@ p {
   letter-spacing: 0%;
   margin-bottom: 20px;
   max-width: 720px;
+}
+
+.btn {
+  margin-top: 120px;
 }
 
 @media (max-width: 1024px) {
