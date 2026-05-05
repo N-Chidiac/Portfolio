@@ -178,7 +178,7 @@ main {
 .description {
   font-family: var(--body-font);
   font-size: 16px;
-  line-height: 0%;
+  letter-spacing: 0%;
   margin-bottom: 12px;
   color: var(--secondary-color);
   font-weight: 400;

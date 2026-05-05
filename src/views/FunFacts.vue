@@ -1,6 +1,7 @@
 <script setup>
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeader from "@/components/TheHeader.vue";
+import TheButton from "@/components/TheButton.vue";
 import { facts } from "@/assets/facts/facts";
 
 const images = import.meta.glob("@/assets/facts/*", { eager: true });
@@ -28,6 +29,10 @@ function getImage(path) {
         </div>
       </article>
     </div>
+    <div class="btns">
+      <TheButton text="About me" color="#000000" path="/about" />
+      <TheButton text="Contact me" color="#4e765d" path="/contact" />
+    </div>
   </main>
   <footer>
     <TheFooter />
@@ -37,6 +42,14 @@ function getImage(path) {
 <style scoped>
 main {
   padding: 110px;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 110px;
 }
 
 .facts-grid {
@@ -100,6 +113,11 @@ main {
     padding: 72px 48px;
   }
 
+  .btns {
+    margin-top: 40px;
+    margin-bottom: 72px;
+  }
+
   .facts-grid {
     justify-content: center;
     gap: 32px;
@@ -109,6 +127,12 @@ main {
 @media (max-width: 768px) {
   main {
     padding: 40px 20px;
+  }
+
+  .btns {
+    flex-wrap: wrap;
+    margin-top: 32px;
+    margin-bottom: 56px;
   }
 
   .facts-grid {

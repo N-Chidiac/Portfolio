@@ -32,7 +32,7 @@
 <style scoped>
 .footer {
   background-color: var(--secondary-color);
-  min-width: 100vw;
+  max-width: 100vw;
   height: 400px;
 
   display: flex;

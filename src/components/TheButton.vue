@@ -31,6 +31,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  box-shadow: var(--hover-shadow);
+}
+
 @media (max-width: 1024px) {
   button {
     width: 140px;

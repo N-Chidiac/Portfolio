@@ -21,7 +21,7 @@
 </template>
 <style scoped>
 header {
-  width: 100%;
+  max-width: 100vw;
   height: 405px;
   background-color: var(--secondary-color);
   display: flex;

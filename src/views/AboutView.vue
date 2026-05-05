@@ -78,6 +78,7 @@ import TheButton from "@/components/TheButton.vue";
         </p>
         <div class="btn">
           <TheButton text="Contact me" color="#4e765d" path="/contact" />
+          <TheButton text="Fun facts" color="#000" path="/contact" />
         </div>
       </div>
       <div class="img-container">
@@ -135,6 +136,8 @@ p {
 
 .btn {
   margin-top: 120px;
+  display: flex;
+  gap: 15px;
 }
 
 @media (max-width: 1024px) {
@@ -179,6 +182,10 @@ p {
   p {
     font-size: 15px;
     line-height: 130%;
+  }
+  .btn {
+    flex-direction: column;
+    margin-top: 30px;
   }
 }
 </style>
