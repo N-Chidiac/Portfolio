@@ -68,11 +68,6 @@ main {
   overflow: hidden;
 }
 
-.fact-card:hover {
-  box-shadow: 4px 4px 8px #4e765d;
-  transform: scale(1.01);
-}
-
 .fact-image {
   width: 100%;
   height: 100%;

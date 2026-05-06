@@ -12,10 +12,18 @@ defineProps({
     type: String,
     required: true,
   },
+  download: {
+    type: String,
+    default: null,
+  },
 });
 </script>
+
 <template>
-  <RouterLink :to="path">
+  <a v-if="download" :href="path" :download="download">
+    <button :style="{ backgroundColor: color }">{{ text }}</button>
+  </a>
+  <RouterLink v-else :to="path">
     <button :style="{ backgroundColor: color }">{{ text }}</button>
   </RouterLink>
 </template>

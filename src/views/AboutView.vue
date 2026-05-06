@@ -78,7 +78,7 @@ import TheButton from "@/components/TheButton.vue";
         </p>
         <div class="btn">
           <TheButton text="Contact me" color="#4e765d" path="/contact" />
-          <TheButton text="Fun facts" color="#000" path="/contact" />
+          <TheButton text="Fun facts" color="#000" path="/facts" />
         </div>
       </div>
       <div class="img-container">

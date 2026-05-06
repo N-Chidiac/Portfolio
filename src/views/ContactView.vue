@@ -55,7 +55,6 @@ import TheHeader from "@/components/TheHeader.vue";
           </a>
         </div>
 
-        <!-- Right: info panel -->
         <div class="contact-right">
           <div class="right-inner">
             <h2>Let's team up!</h2>
@@ -73,8 +72,7 @@ import TheHeader from "@/components/TheHeader.vue";
             </div>
 
             <div class="response-time">
-              <span class="check">✅</span>
-              <p>Ik antwoord meestal binnen 24 uur.</p>
+              <p>Ik antwoord meestal binnen 24 uur!</p>
             </div>
 
             <div class="divider"></div>
