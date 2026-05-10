@@ -74,8 +74,16 @@ main {
   object-fit: cover;
   display: block;
 }
+.fact-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* speel met 0.2 → 0.6 */
+  z-index: 1;
+}
 
 .fact-content {
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
