@@ -78,7 +78,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* speel met 0.2 → 0.6 */
+  background: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
 

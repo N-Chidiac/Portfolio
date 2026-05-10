@@ -19,7 +19,7 @@ import TheHeader from "@/components/TheHeader.vue";
 
           <a href="mailto:nour.chidiac@hotmail.com" class="contact-card">
             <div class="icon-wrapper email">
-              <span><img src="../assets/menu/contact-black.svg" alt="" /></span>
+              <span><img src="../assets/menu/contact-black.svg" alt="contact button" /></span>
             </div>
             <div class="card-content">
               <h3>Email me</h3>
@@ -30,7 +30,7 @@ import TheHeader from "@/components/TheHeader.vue";
 
           <a href="tel:+32472501231" class="contact-card">
             <div class="icon-wrapper call">
-              <span><img src="../assets/menu/call.svg" alt="" /></span>
+              <span><img src="../assets/menu/call.svg" alt="call button" /></span>
             </div>
             <div class="card-content">
               <h3>Call me</h3>
@@ -45,7 +45,7 @@ import TheHeader from "@/components/TheHeader.vue";
             class="contact-card"
           >
             <div class="icon-wrapper linkedin">
-              <span><img src="../assets/menu/linkedin-black.svg" alt="" /></span>
+              <span><img src="../assets/menu/linkedin-black.svg" alt="linkedin button" /></span>
             </div>
             <div class="card-content">
               <h3>Chat with me</h3>

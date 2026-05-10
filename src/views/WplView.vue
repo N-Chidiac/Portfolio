@@ -50,16 +50,28 @@ import TheHeader from "@/components/TheHeader.vue";
     </div>
     <div class="case-imgs">
       <div class="row">
-        <img src="../assets/wpl/rbgh1.png" />
-        <img src="../assets/wpl/rbgh2.png" />
+        <img src="../assets/wpl/rbgh1.png" alt="Image of red bull gaming hub homepage" />
+        <img
+          src="../assets/wpl/rbgh2.png"
+          alt="Image of streams section on redbull gaming hub homepage"
+        />
       </div>
       <div class="row">
-        <img src="../assets/wpl/rbgh3.png" />
-        <img src="../assets/wpl/rbgh4.png" />
+        <img src="../assets/wpl/rbgh3.png" alt="imga of contactpage of red bull gaming hub" />
+        <img
+          src="../assets/wpl/rbgh4.png"
+          alt="Image of healthy gaming ttips page on red bull gaming hub website"
+        />
       </div>
       <div class="row">
-        <img src="../assets/wpl/rbgh5.png" />
-        <img src="../assets/wpl/rbgh6.png" />
+        <img
+          src="../assets/wpl/rbgh5.png"
+          alt="Image of contactpage of red bull gaming hub wesbite"
+        />
+        <img
+          src="../assets/wpl/rbgh6.png"
+          alt="Image of events section on teampage on redbull gemaing hub website."
+        />
       </div>
     </div>
 
