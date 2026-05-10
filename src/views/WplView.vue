@@ -21,7 +21,7 @@ import TheHeader from "@/components/TheHeader.vue";
           <img src="../assets/wpl/rbgh-small.png" alt="image of gaming console" />
         </div>
         <div class="text">
-          <h2>Case beschrijving</h2>
+          <h2>Casebeschrijving</h2>
           <p>
             Voor de WPL2-case werkte ik mee aan de ontwikkeling van de Red Bull Gaming Hub website,
             een platform gericht op de gaming community rond Red Bull. Het doel van deze case was om
@@ -48,15 +48,20 @@ import TheHeader from "@/components/TheHeader.vue";
         </div>
       </div>
     </div>
-
-    <!-- Moet Nog aangepast worden naar juiste link -->
-    <a href="https://www.redbull.com/be-nl/projects/gaming-hub" target="blank" class="website-link">
-      <img src="../assets/wpl/rbgh-large.png" alt="image of gaming console" class="website-bg" />
-      <div class="website-overlay">
-        <h2 class="website-title">CHECK IT OUT</h2>
-        <h2 class="website-subtitle">KLIK HIER OM HET PROJECT TE BEKIJKEN</h2>
+    <div class="case-imgs">
+      <div class="row">
+        <img src="../assets/wpl/rbgh1.png" />
+        <img src="../assets/wpl/rbgh2.png" />
       </div>
-    </a>
+      <div class="row">
+        <img src="../assets/wpl/rbgh3.png" />
+        <img src="../assets/wpl/rbgh4.png" />
+      </div>
+      <div class="row">
+        <img src="../assets/wpl/rbgh5.png" />
+        <img src="../assets/wpl/rbgh6.png" />
+      </div>
+    </div>
 
     <div class="learnings">
       <div class="text">
@@ -196,7 +201,7 @@ import TheHeader from "@/components/TheHeader.vue";
           kan structureren, zodat ik mezelf blijf uitdagen zonder mezelf te overvragen.
         </p>
 
-        <h2>X-factor reflextie</h2>
+        <h2>X-factor-reflectie</h2>
         <p>
           Tijdens Werkplekleren en mijn andere opleidingsonderdelen heb ik op verschillende manieren
           aan deze onderdelen gewerkt.
@@ -252,11 +257,16 @@ import TheHeader from "@/components/TheHeader.vue";
 </template>
 
 <style scoped>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 60px 100px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 60px auto;
+  padding: 0 40px;
 }
 
 .section-wrapper {
@@ -272,6 +282,7 @@ main {
   font-size: 32px;
   letter-spacing: 0%;
   line-height: 100%;
+  margin-top: 40px;
 }
 
 .case,
@@ -294,13 +305,6 @@ main {
   line-height: 100%;
   letter-spacing: 0%;
   margin-top: 40px;
-}
-
-.case h2:first-child,
-.learnings h2:first-child,
-.reflection h2:first-child,
-.reflection-text h2:first-child {
-  margin-top: 0;
 }
 
 .case h3,
@@ -343,61 +347,22 @@ main {
   justify-content: center;
 }
 
-.website-link {
-  position: relative;
-  display: block;
-
-  margin: 80px 0;
-  overflow: hidden;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-.website-bg {
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  filter: brightness(0.45);
-}
-
-.website-overlay {
-  position: absolute;
-  inset: 0;
+.case-imgs {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 40px;
+  margin-top: 130px;
+  margin-bottom: 130px;
+}
+.row {
+  display: flex;
+  gap: 40px;
 }
 
-.website-title {
-  color: var(--white);
-  font-family: var(--title-font);
-  font-weight: 400;
-  font-size: 96px;
-  letter-spacing: 0%;
-  line-height: 100%;
-  text-transform: uppercase;
-  margin: 0;
+.row img {
+  width: calc(50% - 5px);
+  height: auto;
 }
-
-.website-subtitle {
-  color: var(--accent-color);
-  font-family: var(--subtitle-font);
-  font-weight: 400;
-  font-size: 32px;
-  letter-spacing: 36%;
-  line-height: 100%;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.website-link:hover .website-bg {
-  filter: brightness(0.55);
-  transition: filter 0.3s ease;
-  box-shadow: var(--hover-shadow);
-}
-
 .btns {
   display: flex;
   gap: 15px;
@@ -407,7 +372,8 @@ main {
 
 @media (max-width: 1024px) {
   main {
-    margin: 40px 60px;
+    margin: 40px auto;
+    padding: 0 32px;
   }
 
   .case,
@@ -416,18 +382,20 @@ main {
     gap: 60px;
   }
 
-  .website-title {
-    font-size: 64px;
+  .row {
+    flex-wrap: wrap;
   }
 
-  .website-subtitle {
-    font-size: 24px;
+  .row img {
+    width: calc(50% - 20px);
+    height: auto;
   }
 }
 
 @media (max-width: 768px) {
   main {
-    margin: 40px 32px;
+    margin: 40px auto;
+    padding: 0 24px;
   }
 
   .case,
@@ -459,28 +427,13 @@ main {
     margin-top: 40px;
   }
 
-  .website-link {
-    margin: 48px 0;
-  }
-
-  .website-title {
-    font-size: 48px;
-  }
-
-  .website-subtitle {
-    font-size: 18px;
-    letter-spacing: 20%;
-  }
-
   .btns {
     flex-direction: column;
     align-items: center;
   }
-}
 
-@media (max-width: 480px) {
-  main {
-    margin: 24px 20px;
+  .row img {
+    width: 100%;
   }
 
   .title,
@@ -489,6 +442,23 @@ main {
   .reflection h2,
   .reflection-text h2 {
     font-size: 24px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    margin: 24px auto;
+    padding: 0 20px;
+  }
+
+  .title,
+  .case h2,
+  .learnings h2,
+  .reflection h2,
+  .reflection-text h2 {
+    font-size: 24px;
+    margin-top: 30px;
   }
 
   .case h3,
@@ -505,13 +475,8 @@ main {
     font-size: 15px;
   }
 
-  .website-title {
-    font-size: 36px;
-  }
-
-  .website-subtitle {
-    font-size: 14px;
-    letter-spacing: 10%;
+  .row img {
+    width: 100%;
   }
 }
 </style>
