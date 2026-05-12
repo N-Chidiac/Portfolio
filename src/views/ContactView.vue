@@ -297,6 +297,11 @@ import TheHeader from "@/components/TheHeader.vue";
 
 .right-btn {
   margin-top: 2rem;
+  width: fit-content;
+}
+
+.right-btn:hover {
+  box-shadow: var(--hover-shadow);
 }
 .mail-btn {
   display: inline-flex;

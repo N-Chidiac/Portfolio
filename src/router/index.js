@@ -50,7 +50,7 @@ const router = createRouter({
     {
       path: "/privacy",
       name: "privacy-policy",
-      component: () => import("@/views/WplView.vue"),
+      component: () => import("@/views/PrivacyPolicy.vue"),
     },
   ],
 });

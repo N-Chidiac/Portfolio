@@ -211,6 +211,10 @@ main {
   min-width: 220px;
 }
 
+li a:hover {
+  box-shadow: var(--hover-shadow);
+}
+
 .dot {
   width: 8px;
   height: 8px;
