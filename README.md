@@ -1,30 +1,45 @@
-# Portfolio (Work in Progress)
+# Portfolio — Nour Chidiac
 
-Dit is mijn persoonlijke portfolio website, gebouwd met Vue 3 en Vite.
-De website is nog in ontwikkeling en wordt stap voor stap verder afgewerkt.
+Mijn persoonlijke portfolio website, gebouwd met Vue 3 en Vite.
 
-## Status
+## Live website
 
-De basisstructuur staat al klaar:
+[nourchidiac.netlify.app](https://nourchidiac.netlify.app/)
 
-- globale navigatie en header/footer componenten
-- homepage met intro, skills en recente projecten
-- projectenoverzicht en project detailpagina
-- basis responsive gedrag voor desktop/tablet/mobile
+## Pagina's
 
-Nog in opbouw:
+| Route          | Pagina         | Omschrijving                                                        |
+| -------------- | -------------- | ------------------------------------------------------------------- |
+| `/`            | Menu           | Fullscreen navigatiemenu met alle links en socials                  |
+| `/home`        | Home           | Intro, skillsoverzicht en recente projecten                         |
+| `/about`       | About          | Achtergrond, hobbies en interesses                                  |
+| `/projects`    | Projects       | Volledig projectenoverzicht, gesorteerd op datum                    |
+| `/project/:id` | Project detail | Projectomschrijving, gebruikte technieken en links                  |
+| `/facts`       | Fun Facts      | Persoonlijke weetjes in kaartformaat                                |
+| `/contact`     | Contact        | Contactkaarten (e-mail, telefoon, LinkedIn) en statusblok           |
+| `/wpl`         | WPL            | WPL1 & WPL2 casebeschrijving, reflecties en downloadbare opdrachten |
+| `/privacy`     | Privacy Policy | AVG/GDPR-conform privacybeleid                                      |
 
-- verdere uitwerking van enkele pagina's (zoals About, Contact en Fun Facts)
-- extra content, finetuning en polish
+## Componenten
+
+- **TheHeader** — Herbruikbare paginaheader met titels via named slots
+- **TheFooter** — Sitewijde footer met navigatielinks en socials
+- **TheButton** — Knop met configureerbare kleur, ondersteunt zowel interne routering als bestandsdownloads
+- **TheProjectCard** — Projectkaart met afbeelding, titel en type; klikbaar naar detailpagina
+- **TheSkill** — Icoon + label voor het weergeven van technische vaardigheden
 
 ## Tech Stack
 
-- Vue 3
+- Vue 3 (Composition API)
 - Vue Router
 - Pinia
 - Vite
 
-## Project Setup
+## Skills & tools
+
+HTML · CSS · JavaScript · Vue.js · Node.js · VSCode · NPM · Figma · Illustrator · Photoshop
+
+## Project setup
 
 ```bash
 npm install
@@ -57,4 +72,3 @@ npm run lint
 ## Auteur
 
 Nour Chidiac
-
