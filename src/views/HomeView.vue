@@ -51,7 +51,7 @@ const recentProjects = computed(() =>
   <main>
     <div class="about-me">
       <div class="profile-image">
-        <img src="../assets/Homepage/about-me-homepage.png" alt="profile image" />
+        <img src="../assets/Homepage/about-me-homepage.webp" alt="profile image" fetchpriority="high" />
       </div>
       <div class="right-content">
         <div class="content-box">

@@ -8,17 +8,16 @@ Mijn persoonlijke portfolio website, gebouwd met Vue 3 en Vite.
 
 ## Pagina's
 
-| Route          | Pagina         | Omschrijving                                                        |
-| -------------- | -------------- | ------------------------------------------------------------------- |
-| `/`            | Menu           | Fullscreen navigatiemenu met alle links en socials                  |
-| `/home`        | Home           | Intro, skillsoverzicht en recente projecten                         |
-| `/about`       | About          | Achtergrond, hobbies en interesses                                  |
-| `/projects`    | Projects       | Volledig projectenoverzicht, gesorteerd op datum                    |
-| `/project/:id` | Project detail | Projectomschrijving, gebruikte technieken en links                  |
-| `/facts`       | Fun Facts      | Persoonlijke weetjes in kaartformaat                                |
-| `/contact`     | Contact        | Contactkaarten (e-mail, telefoon, LinkedIn) en statusblok           |
-| `/wpl`         | WPL            | WPL1 & WPL2 casebeschrijving, reflecties en downloadbare opdrachten |
-| `/privacy`     | Privacy Policy | AVG/GDPR-conform privacybeleid                                      |
+| Route          | Pagina         | Omschrijving                                              |
+| -------------- | -------------- | --------------------------------------------------------- |
+| `/`            | Menu           | Fullscreen navigatiemenu met alle links en socials        |
+| `/home`        | Home           | Intro, skillsoverzicht en recente projecten               |
+| `/about`       | About          | Achtergrond, hobbies en interesses                        |
+| `/projects`    | Projects       | Volledig projectenoverzicht, gesorteerd op datum          |
+| `/project/:id` | Project detail | Projectomschrijving, gebruikte technieken en links        |
+| `/facts`       | Fun Facts      | Persoonlijke weetjes in kaartformaat                      |
+| `/contact`     | Contact        | Contactkaarten (e-mail, telefoon, LinkedIn) en statusblok |
+| `/privacy`     | Privacy Policy | AVG/GDPR-conform privacybeleid                            |
 
 ## Componenten
 

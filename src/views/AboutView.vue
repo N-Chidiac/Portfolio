@@ -15,7 +15,12 @@ import TheButton from "@/components/TheButton.vue";
   <main>
     <section class="background">
       <div class="img-container">
-        <img src="../assets/about-me/painter.png" alt="Image of hand pinting wall" />
+        <img
+          src="../assets/about-me/painter.webp"
+          alt="Image of hand pinting wall"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div class="text-container">
         <h2 class="title">My background</h2>
@@ -53,7 +58,12 @@ import TheButton from "@/components/TheButton.vue";
       </div>
     </section>
     <section class="profile-img">
-      <img src="../assets/about-me/profile-img.png" alt="profile image of me" />
+      <img
+        src="../assets/about-me/profile-img.webp"
+        alt="profile image of me"
+        loading="lazy"
+        decoding="async"
+      />
     </section>
     <section class="hobbies-interests">
       <div class="text-container">
@@ -82,7 +92,12 @@ import TheButton from "@/components/TheButton.vue";
         </div>
       </div>
       <div class="img-container">
-        <img src="../assets/about-me/paint-pallete.png" alt="image of a paint pallette" />
+        <img
+          src="../assets/about-me/paint-pallete.webp"
+          alt="image of a paint pallette"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </section>
   </main>

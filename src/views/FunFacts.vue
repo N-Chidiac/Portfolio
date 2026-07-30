@@ -22,7 +22,13 @@ function getImage(path) {
   <main>
     <div class="facts-grid">
       <article v-for="fact in facts" :key="fact.id" class="fact-card">
-        <img :src="getImage(fact.image)" :alt="fact.title" class="fact-image" />
+        <img
+          :src="getImage(fact.image)"
+          :alt="fact.title"
+          class="fact-image"
+          loading="lazy"
+          decoding="async"
+        />
         <div class="fact-content">
           <h3 class="fact-title">{{ fact.title }}</h3>
           <p class="fact-subtitle">{{ fact.subtitle }}</p>

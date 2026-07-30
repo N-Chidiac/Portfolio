@@ -22,7 +22,7 @@ defineProps({
 <template>
   <RouterLink :to="`/project/${id}`" class="card-link">
     <div class="project-card">
-      <img :src="image" :alt="title" class="card-image" />
+      <img :src="image" :alt="title" class="card-image" loading="lazy" decoding="async" />
       <div class="card-content">
         <h3 class="card-title">{{ title }}</h3>
         <p class="card-subtitle">{{ subtitle }}</p>

@@ -276,6 +276,7 @@ import TheHeader from "@/components/TheHeader.vue";
   text-transform: uppercase;
   color: var(--secondary-color);
   margin-bottom: 1rem;
+  overflow-wrap: break-word;
 }
 
 .policy-section p {

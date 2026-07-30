@@ -61,7 +61,12 @@ const usedSkills = computed(() =>
               <span>{{ skill.label }}</span>
             </div>
           </div>
-          <img :src="getImage(project.image)" :alt="project.name" class="project-image" />
+          <img
+            :src="getImage(project.image)"
+            :alt="project.name"
+            class="project-image"
+            fetchpriority="high"
+          />
         </div>
       </div>
 

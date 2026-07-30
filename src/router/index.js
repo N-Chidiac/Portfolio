@@ -42,11 +42,7 @@ const router = createRouter({
       name: "contact",
       component: () => import("@/views/ContactView.vue"),
     },
-    {
-      path: "/wpl",
-      name: "wpl",
-      component: () => import("@/views/WplView.vue"),
-    },
+
     {
       path: "/privacy",
       name: "privacy-policy",

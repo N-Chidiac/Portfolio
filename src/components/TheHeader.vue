@@ -53,7 +53,8 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  width: min(85vw, 900px);
 
   .title {
     h1 {
@@ -64,6 +65,7 @@ header {
       letter-spacing: 0%;
       line-height: 100%;
       text-align: center;
+      overflow-wrap: break-word;
     }
   }
   .subtitle {
@@ -75,6 +77,7 @@ header {
       letter-spacing: 36%;
       line-height: 100%;
       text-align: center;
+      overflow-wrap: break-word;
     }
   }
 }
@@ -94,6 +97,8 @@ header {
   }
 
   .title-container {
+    width: min(90vw, 800px);
+
     .title h1 {
       font-size: 72px;
     }
@@ -105,7 +110,7 @@ header {
 
 @media (max-width: 640px) {
   header {
-    height: 240px;
+    height: 280px;
   }
 
   .nav {
@@ -123,11 +128,28 @@ header {
   }
 
   .title-container {
+    width: min(88vw, 500px);
+
     .title h1 {
       font-size: 42px;
     }
     .subtitle h2 {
       font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    height: 300px;
+  }
+
+  .title-container {
+    .title h1 {
+      font-size: 32px;
+    }
+    .subtitle h2 {
+      font-size: 14px;
     }
   }
 }

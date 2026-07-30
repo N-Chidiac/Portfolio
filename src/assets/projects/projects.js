@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     name: "Portfolio Website",
-    image: "./projects/portfolio.png",
+    image: "./projects/portfolio.webp",
     description: [
       "Voor dit project ontwikkelde ik mijn eerste portfolio website met een unieke Visual Studio Code–geïnspireerde interface. De website is opgezet alsof de gebruiker zich in een code-editor bevindt, wat zorgt voor een creatieve en developergerichte presentatie van mijn projecten en informatie.",
       'De focus lag op het combineren van een speels concept met functionele frontendontwikkeling. Door het nabootsen van een VS Code-omgeving werd de content op een originele manier gestructureerd, met aandacht voor layout, styling en navigatie binnen het "editor"-thema.',
@@ -27,7 +27,7 @@ export const projects = [
   {
     id: 2,
     name: "Animated Login Page",
-    image: "./projects/login-page.png",
+    image: "./projects/login-page.webp",
     description: [
       "Voor dit project ontwikkelde ik een moderne loginpagina met geanimeerde elementen die zorgen voor een dynamische en visueel aantrekkelijke gebruikerservaring. De interface bevat animaties rond het loginformulier, waardoor de interactie vloeiender en levendiger aanvoelt.",
       "De focus lag op het combineren van een clean UI met speelse animaties, waarbij HTML, CSS en JavaScript werden gebruikt om zowel de structuur, styling als interacties te realiseren. Daarnaast werd aandacht besteed aan gebruiksvriendelijkheid en een duidelijke focus op het loginproces.",
@@ -52,7 +52,7 @@ export const projects = [
   {
     id: 3,
     name: "Calculator",
-    image: "./projects/calculator.png",
+    image: "./projects/calculator.webp",
     description: [
       "Voor dit project ontwikkelde ik een eenvoudige calculator webapplicatie waarmee gebruikers basisbewerkingen zoals optellen, aftrekken, vermenigvuldigen en delen kunnen uitvoeren. De applicatie biedt een intuïtieve interface met knoppen en een duidelijke display voor het weergeven van invoer en resultaten.",
       "De focus lag op het correct implementeren van de logica achter de rekenfuncties in JavaScript en het dynamisch updaten van de gebruikersinterface via DOM-manipulatie. Hierbij werd aandacht besteed aan een vlotte interactie en een duidelijke, gebruiksvriendelijke layout.",
@@ -77,7 +77,7 @@ export const projects = [
   {
     id: 4,
     name: "Digital Clock",
-    image: "./projects/clock.png",
+    image: "./projects/clock.webp",
     description: [
       "Voor dit project ontwikkelde ik een digitale klok webapplicatie die de huidige tijd dynamisch weergeeft en continu real-time wordt bijgewerkt. De applicatie toont de tijd op een duidelijke en minimalistische manier, met focus op leesbaarheid en een strak design.",
       "De nadruk lag op het correct omgaan met tijdslogica in JavaScript en het dynamisch updaten van de interface zonder manuele refresh. Hierbij werd gewerkt met interval-logica en DOM-updates om een vloeiende en nauwkeurige weergave van de tijd te garanderen.",
@@ -102,7 +102,7 @@ export const projects = [
   {
     id: 5,
     name: "Tic Tac Toe",
-    image: "./projects/tictactoe.png",
+    image: "./projects/tictactoe.webp",
     description: [
       "Voor dit project ontwikkelde ik een interactieve Tic Tac Toe webapplicatie waarin twee spelers tegen elkaar kunnen spelen op een klassiek 3x3 speelveld. De applicatie bevat spellogica voor het afwisselen van beurten, het detecteren van wincondities en het herkennen van een gelijkspel.",
       "De focus lag op het correct implementeren van de game logic in JavaScript en het dynamisch updaten van de gebruikersinterface op basis van spelersinteracties. Hierbij werd aandacht besteed aan een duidelijke structuur en een vlotte, intuïtieve speelervaring.",
@@ -127,7 +127,7 @@ export const projects = [
   {
     id: 6,
     name: "Restaurant Website",
-    image: "./projects/restaurant-website.png",
+    image: "./projects/restaurant-website.webp",
     description: [
       "Voor dit project ontwikkelde ik een moderne restaurantwebsite met een focus op een duidelijke structuur, gebruiksvriendelijke navigatie en een aantrekkelijke presentatie van het menu en de informatie van het restaurant.",
       "De website bevat verschillende pagina's zoals een menu-overzicht, informatie over het restaurant en contactmogelijkheden. Tijdens de ontwikkeling lag de nadruk op een clean design, consistente styling en een intuïtieve gebruikerservaring, zowel op desktop als mobiele apparaten.",
@@ -152,7 +152,7 @@ export const projects = [
   {
     id: 7,
     name: "Quiz Web App",
-    image: "./projects/quiz.png",
+    image: "./projects/quiz.webp",
     description: [
       "Voor dit project ontwikkelde ik een interactieve quiz webapplicatie waarbij gebruikers hun kennis kunnen testen aan de hand van meerkeuzevragen. De applicatie begeleidt de gebruiker stap voor stap door de quiz, waarbij vragen en antwoordopties dynamisch worden weergegeven en de score op het einde wordt berekend.",
       "De focus lag op het uitwerken van een duidelijke flow en gebruiksvriendelijke interactie, zoals het selecteren van antwoorden, navigeren tussen vragen en het tonen van resultaten. Daarnaast heb ik gewerkt met state management en logica om de voortgang van de gebruiker correct bij te houden en de score te verwerken.",
@@ -177,7 +177,7 @@ export const projects = [
   {
     id: 8,
     name: "Flashcard Web App",
-    image: "./projects/flashcards.png",
+    image: "./projects/flashcards.webp",
     description: [
       "Voor dit project ontwikkelde ik een interactieve flashcard webapplicatie gericht op het inoefenen van leerstof via bestaande vraag-en-antwoord kaarten. De gebruiker kan door de kaarten navigeren en deze omdraaien om antwoorden te bekijken, wat zorgt voor een actieve en visuele leerervaring.",
       "De focus lag op het bouwen van een duidelijke en intuïtieve interface, waarbij interactie centraal staat. Functionaliteiten zoals het flippen van kaarten en het dynamisch weergeven van content werden uitgewerkt met aandacht voor gebruiksvriendelijkheid en logische structuur.",
@@ -202,7 +202,7 @@ export const projects = [
   {
     id: 9,
     name: "Task Tracker CLI",
-    image: "./projects/task-tracker-cli.png",
+    image: "./projects/task-tracker-cli.webp",
     description: [
       'Voor dit project ontwikkelde ik een command-line task tracker waarmee gebruikers hun taken eenvoudig kunnen beheren via de terminal. De applicatie laat toe om taken toe te voegen, bij te werken, te verwijderen en te filteren op status, zoals "todo", "in progress" en "done".',
       "De focus lag op het bouwen van een duidelijke en efficiënte CLI-structuur, waarbij ik werkte met bestandshantering en JSON-opslag om data persistent te bewaren. Elke taak wordt automatisch voorzien van een unieke ID en timestamps, waardoor de applicatie overzichtelijk en schaalbaar blijft.",
@@ -227,7 +227,7 @@ export const projects = [
   {
     id: 10,
     name: "Red Bull Gaming Hub Website",
-    image: "./projects/rbgh.png",
+    image: "./projects/rbgh.webp",
     description: [
       "Voor dit project werkte ik mee aan de ontwikkeling van de Red Bull Gaming Hub website, waarbij de focus lag op het uitwerken van een interactieve en gebruiksvriendelijke webervaring voor gamers. De website bevat verschillende features zoals teaminformatie, statistieken en dynamische content.",
       "Binnen dit project heb ik bijgedragen aan de frontendontwikkeling, waarbij ik werkte met moderne webtechnologieën en aandacht had voor structuur, herbruikbare componenten en een consistente user experience. Daarnaast heb ik mee nagedacht over functionaliteiten zoals interactieve elementen en datavisualisatie.",
@@ -235,7 +235,7 @@ export const projects = [
     ],
     type: "School project",
     // github: "",
-    date: "01-01-2028",
+    date: "16-06-2026",
     tech: {
       html: true,
       css: true,
@@ -252,7 +252,7 @@ export const projects = [
   {
     id: 11,
     name: "Pokédex",
-    image: "./projects/pokedex.png",
+    image: "./projects/pokedex.webp",
     description: [
       "Voor dit project ontwikkelde ik een Pokédex-applicatie in Vue om mijn kennis van moderne frontendtechnologieën te verdiepen. De applicatie bevat een overzichtspagina en een detailpagina met uitgebreide informatie per Pokémon.",
       "Ik werkte met Vue 3, Vue Router en Pinia, en bouwde de applicatie stapsgewijs op van statische data naar een volledig dynamische toepassing met integratie van de PokéAPI. Daarbij implementeerde ik reactiviteit, routing, component-based structuur en API-calls.",
@@ -260,7 +260,7 @@ export const projects = [
     ],
     type: "School project",
     // github: "",
-    date: "01-01-2028",
+    date: "16-06-2026",
     tech: {
       html: true,
       css: true,
@@ -277,7 +277,7 @@ export const projects = [
   {
     id: 12,
     name: "Portfolio Website",
-    image: "./projects/portfolio.png",
+    image: "./projects/portfolio.webp",
     description: [
       "Voor dit project heb ik mijn bestaande portfolio website volledig herwerkt met een sterke focus op professionaliteit, consistent design en gebruiksvriendelijkheid. Mijn vorige portfolio voldeed niet meer aan mijn huidige niveau, zowel op vlak van design als technologie, waardoor ik ervoor koos om vanaf nul opnieuw te beginnen.",
       "Tijdens dit proces heb ik bewust gekozen om recente technologieën die ik heb geleerd actief toe te passen. De website werd volledig zelf ontworpen met een clean en minimalistische stijl, en vervolgens uitgewerkt in Vue. Hierbij lag de nadruk op een gestructureerde opbouw, herbruikbare componenten en een duidelijke navigatie.",
@@ -285,7 +285,7 @@ export const projects = [
     ],
     type: "School project",
     github: "https://github.com/N-Chidiac/Portfolio",
-    date: "01-01-2028",
+    date: "16-06-2026",
     tech: {
       html: true,
       css: true,
@@ -296,6 +296,105 @@ export const projects = [
       npm: true,
       figma: true,
       illustrator: true,
+      photoshop: false,
+    },
+  },
+  {
+    id: 13,
+    name: "Machinecontrole & Beheersysteem",
+    image: "./projects/machinecontrole.webp",
+    description: [
+      "Voor dit project ontwikkelde ik een digitale applicatie voor het beheer en de controle van heftrucks en andere magazijnmachines, gebouwd tijdens een studentenjob bij Polymer Contractors. De applicatie bevat wekelijkse controlechecklists, herstellingsaanvragen, een machine-register en een doorzoekbaar historisch overzicht, allemaal gekoppeld via QR-code scanning.",
+      "De focus lag op het bouwen van een volledige full-stack applicatie met Vue 3 aan de frontend en Node.js/Express met een SQLite-database aan de backend. Ik werkte met JWT-authenticatie met een extra beveiligingslaag voor administratieve acties, een herbruikbare QR-scanner-component, en automatische PDF-rapportage die na elke controle of herstellingsaanvraag rechtstreeks per e-mail verstuurd wordt.",
+      "Dit project hielp me om te ervaren hoe je een applicatie bouwt die niet voor een oefening dient, maar écht door collega's op de werkvloer gebruikt wordt: van database-ontwerp en authenticatie tot foutafhandeling en deployment. Het gaf me waardevol inzicht in het werken met echte requirements, gebruikersfeedback en productieomstandigheden.",
+    ],
+    type: "Student job project",
+    github: "",
+    date: "30-07-2026",
+    tech: {
+      html: true,
+      css: true,
+      javascript: true,
+      vue: true,
+      nodejs: true,
+      vscode: true,
+      npm: true,
+      figma: false,
+      illustrator: false,
+      photoshop: false,
+    },
+  },
+  {
+    id: 14,
+    name: "Werkvergunningen Beheersysteem",
+    image: "./projects/werkvergunning.webp",
+    description: [
+      "Voor dit project ontwikkelde ik een digitale applicatie om werkvergunningen aan te maken, af te sluiten en op te volgen, gebouwd tijdens een studentenjob bij Polymer Contractors. Gebruikers vullen een volledig formulier in (veiligheidsinstructies, checklists en digitale handtekeningen) waarna de server automatisch een PDF genereert op basis van een Excel-sjabloon. Elke werkvergunning blijft nadien terug te vinden, te downloaden, af te sluiten en aan te vullen met bijlages via een doorzoekbaar overzicht.",
+      "De focus lag op een volledige full-stack applicatie met Vue 3 (Composition API), Vite en Pinia aan de frontend, en Node.js/Express met een SQLite-compatibele Turso-database aan de backend. Ik werkte met rolgebaseerde JWT-authenticatie (gebruiker/admin), een canvas-gebaseerde handtekeningcomponent zonder externe dependency, en server-side PDF-generatie waarbij een Excel-sjabloon automatisch ingevuld en via LibreOffice headless omgezet wordt naar PDF.",
+      "Dit project leerde me hoe je een applicatie bouwt die écht door collega's op de werkvloer gebruikt wordt: van databaseontwerp (met append-only logboeken voor opmerkingen en statuswijzigingen) en authenticatie tot deployment. De frontend en backend draaien apart (Netlify en Render als Docker-image), wat me inzicht gaf in cross-domain authenticatie, CORS en het werken met echte productieomstandigheden.",
+    ],
+    type: "Student job project",
+    github: "",
+    date: "30-07-2026",
+    tech: {
+      html: true,
+      css: true,
+      javascript: true,
+      vue: true,
+      nodejs: true,
+      vscode: true,
+      npm: true,
+      figma: false,
+      illustrator: false,
+      photoshop: false,
+    },
+  },
+  {
+    id: 15,
+    name: "Douane-aanvraagsysteem",
+    image: "./projects/douane.webp",
+    description: [
+      "Voor dit project ontwikkelde ik een digitale applicatie waarmee heftruckchauffeurs douane-aanvragen indienen, gebouwd tijdens een studentenjob bij Polymer Contractors. Naast een naam en een foto van de laadbrief en de nummerplaat/het containernummer, herkent de applicatie automatisch het DN-nummer uit de foto van de laadbrief via OCR — de chauffeur moet deze herkenning wel altijd bevestigen of corrigeren vóór het versturen. Admins krijgen via een wachtwoord-beveiligd overzicht alle aanvragen te zien, met live meldingen bij nieuwe aanvragen, zoek- en filterfunctionaliteit en de mogelijkheid om de gegenereerde PDF's te bekijken en te downloaden.",
+      "De focus lag op een volledige full-stack applicatie met Vue 3 (Composition API) en Pinia aan de frontend, en Node.js/Express met een Turso-database (SQLite-compatibel) aan de backend. Voor de automatische DN-nummerherkenning werkte ik met Tesseract.js en sharp voor beeldvoorbewerking (grijswaarden, contrastnormalisatie en rotatiecorrectie over meerdere hoeken), en met JWT-authenticatie en rate limiting voor het admin-gedeelte. De PDF van elke aanvraag wordt client-side gegenereerd en na versturen samen met de aanvraaggegevens opgeslagen.",
+      "Dit project leerde me hoe je OCR op een betrouwbare manier inzet binnen een workflow waar de gebruiker de output altijd zelf moet controleren, en gaf me ervaring met performance-optimalisatie zoals het hergebruiken van eenzelfde OCR-worker over meerdere aanvragen heen. Ook hier ging het om een applicatie die écht door collega's op de werkvloer gebruikt wordt, met aandacht voor real-time feedback, foutafhandeling en deployment naar een gescheiden frontend (Netlify) en backend (Render).",
+    ],
+    type: "Student job project",
+    github: "",
+    date: "30-07-2026",
+    tech: {
+      html: true,
+      css: true,
+      javascript: true,
+      vue: true,
+      nodejs: true,
+      vscode: true,
+      npm: true,
+      figma: false,
+      illustrator: false,
+      photoshop: false,
+    },
+  },
+  {
+    id: 16,
+    name: "Bulkcontrole & Beheersysteem",
+    image: "./projects/bulk.webp",
+    description: [
+      "Voor dit project ontwikkelde ik een digitale applicatie voor de veiligheids- en kwaliteitscontrole van bulkwagens en citernes, gebouwd tijdens een studentenjob bij Polymer Contractors. De applicatie vervangt een papieren controleformulier door een digitale checklist gekoppeld aan barcode-scanning van het DN-nummer, een verplichte foto-opname en een automatisch gegenereerd PDF-rapport per controle.",
+      "De focus lag op het bouwen van een volledige full-stack applicatie met Vue 3 aan de frontend en Node.js/Express met een SQLite-database (via libSQL/Turso) aan de backend. Ik werkte met JWT-authenticatie voor het beveiligde beheerdersoverzicht, een herbruikbare barcode-scanner- en cameracomponent, automatische PDF-rapportage, en een live meldingssysteem dat het beheerteam rechtstreeks in de browser waarschuwt zodra er een nieuwe controle binnenkomt, zonder dat de pagina manueel ververst moet worden.",
+      "Dit project hielp me om te ervaren hoe je een applicatie bouwt die niet voor een oefening dient, maar écht door collega's op de werkvloer gebruikt wordt: van database-ontwerp en authenticatie tot foutafhandeling en deployment. Na de eerste lancering bleef ik de applicatie itereren op basis van feedback van de gebruikers zelf, wat me veel inzicht gaf in het werken met echte requirements en productieomstandigheden.",
+    ],
+    type: "Student job project",
+    date: "30-07-2026",
+    tech: {
+      html: true,
+      css: true,
+      javascript: true,
+      vue: true,
+      nodejs: true,
+      vscode: true,
+      npm: true,
+      figma: false,
+      illustrator: false,
       photoshop: false,
     },
   },

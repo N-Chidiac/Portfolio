@@ -9,7 +9,7 @@
       </div>
       <div class="col2">
         <RouterLink to="/facts">FUN FACTS </RouterLink>
-        <RouterLink to="/wpl">WPL</RouterLink>
+
         <RouterLink to="/privacy">PRIVACY POLICY</RouterLink>
         <div class="socials">
           <a href="https://github.com/N-Chidiac" target="_blank">
