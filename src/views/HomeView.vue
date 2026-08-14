@@ -17,6 +17,12 @@ import npm from "@/assets/Homepage/npm.png";
 import figma from "@/assets/Homepage/Figma.png";
 import illustrator from "@/assets/Homepage/illustrator.png";
 import photoshop from "@/assets/Homepage/photoshop.png";
+import vite from "@/assets/Homepage/Vite.svg";
+import pinia from "@/assets/Homepage/Pinia.svg";
+import express from "@/assets/Homepage/Express.svg";
+import sqlite from "@/assets/Homepage/SQLite.svg";
+import docker from "@/assets/Homepage/Docker.svg";
+import jwt from "@/assets/Homepage/JWT.svg";
 
 const projectImages = import.meta.glob("@/assets/projects/*", { eager: true });
 
@@ -51,7 +57,11 @@ const recentProjects = computed(() =>
   <main>
     <div class="about-me">
       <div class="profile-image">
-        <img src="../assets/Homepage/about-me-homepage.webp" alt="profile image" fetchpriority="high" />
+        <img
+          src="../assets/Homepage/about-me-homepage.webp"
+          alt="profile image"
+          fetchpriority="high"
+        />
       </div>
       <div class="right-content">
         <div class="content-box">
@@ -88,6 +98,14 @@ const recentProjects = computed(() =>
             <TheSkill :image="figma" alt="Figma logo" text="Figma" />
             <TheSkill :image="illustrator" alt="Illustrator logo" text="Illustrator" />
             <TheSkill :image="photoshop" alt="PhotoShop logo" text="PhotoShop" />
+          </div>
+          <div class="row">
+            <TheSkill :image="vite" alt="Vite logo" text="Vite" />
+            <TheSkill :image="pinia" alt="Pinia logo" text="Pinia" />
+            <TheSkill :image="express" alt="Express logo" text="Express" />
+            <TheSkill :image="sqlite" alt="SQLite logo" text="SQLite" />
+            <TheSkill :image="docker" alt="Docker logo" text="Docker" />
+            <TheSkill :image="jwt" alt="JWT logo" text="JWT" />
           </div>
         </div>
       </div>

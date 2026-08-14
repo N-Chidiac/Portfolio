@@ -32,6 +32,12 @@ const skillMap = {
   figma: { label: "Figma", file: "Figma.png" },
   illustrator: { label: "Illustrator", file: "illustrator.png" },
   photoshop: { label: "PhotoShop", file: "photoshop.png" },
+  vite: { label: "Vite", file: "Vite.svg" },
+  pinia: { label: "Pinia", file: "Pinia.svg" },
+  express: { label: "Express", file: "Express.svg" },
+  database: { label: "SQLite / Turso", file: "SQLite.svg" },
+  docker: { label: "Docker", file: "Docker.svg" },
+  jwt: { label: "JWT", file: "JWT.svg" },
 };
 
 const usedSkills = computed(() =>

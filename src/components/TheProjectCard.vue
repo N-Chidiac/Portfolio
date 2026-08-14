@@ -75,6 +75,7 @@ defineProps({
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
+  white-space: pre-line;
 }
 
 .card-subtitle {
