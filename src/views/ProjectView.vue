@@ -5,6 +5,7 @@ import TheHeader from "@/components/TheHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import { projects } from "@/assets/projects/projects";
 import TheButton from "@/components/TheButton.vue";
+import TheImage from "@/components/TheImage.vue";
 
 const route = useRoute();
 const project = computed(() => projects.find((p) => p.id === Number(route.params.id)));
@@ -67,11 +68,13 @@ const usedSkills = computed(() =>
               <span>{{ skill.label }}</span>
             </div>
           </div>
-          <img
+          <TheImage
             :src="getImage(project.image)"
             :alt="project.name"
-            class="project-image"
+            ratio="360/460"
+            loading="eager"
             fetchpriority="high"
+            class="project-image"
           />
         </div>
       </div>
@@ -140,8 +143,6 @@ main {
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .tech-list {

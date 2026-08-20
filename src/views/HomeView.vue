@@ -5,8 +5,10 @@ import TheFooter from "@/components/TheFooter.vue";
 import TheHeader from "@/components/TheHeader.vue";
 import TheProjectCard from "@/components/TheProjectCard.vue";
 import TheSkill from "@/components/TheSkill.vue";
+import TheImage from "@/components/TheImage.vue";
 import { projects } from "@/assets/projects/projects";
 
+import profileImage from "@/assets/Homepage/about-me-homepage.webp";
 import html from "@/assets/Homepage/HTML5-s.svg";
 import css from "@/assets/Homepage/CSS3.png";
 import javascript from "@/assets/Homepage/Javascript.png";
@@ -57,10 +59,13 @@ const recentProjects = computed(() =>
   <main>
     <div class="about-me">
       <div class="profile-image">
-        <img
-          src="../assets/Homepage/about-me-homepage.webp"
+        <TheImage
+          :src="profileImage"
           alt="profile image"
+          ratio="298/399"
+          loading="eager"
           fetchpriority="high"
+          class="profile-image-media"
         />
       </div>
       <div class="right-content">
@@ -153,10 +158,9 @@ main {
   justify-content: center;
 }
 
-.profile-image img {
+.profile-image-media {
   width: 100%;
   max-width: 298px;
-  object-fit: cover;
 }
 
 .right-content {
@@ -300,7 +304,7 @@ p {
     margin-bottom: 56px;
   }
 
-  .profile-image img {
+  .profile-image-media {
     max-width: 240px;
   }
 

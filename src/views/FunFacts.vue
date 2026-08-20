@@ -2,6 +2,7 @@
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeader from "@/components/TheHeader.vue";
 import TheButton from "@/components/TheButton.vue";
+import TheImage from "@/components/TheImage.vue";
 import { facts } from "@/assets/facts/facts";
 
 const images = import.meta.glob("@/assets/facts/*", { eager: true });
@@ -22,13 +23,7 @@ function getImage(path) {
   <main>
     <div class="facts-grid">
       <article v-for="fact in facts" :key="fact.id" class="fact-card">
-        <img
-          :src="getImage(fact.image)"
-          :alt="fact.title"
-          class="fact-image"
-          loading="lazy"
-          decoding="async"
-        />
+        <TheImage :src="getImage(fact.image)" :alt="fact.title" ratio="360/460" class="fact-image" />
         <div class="fact-content">
           <h3 class="fact-title">{{ fact.title }}</h3>
           <p class="fact-subtitle">{{ fact.subtitle }}</p>
@@ -77,8 +72,6 @@ main {
 .fact-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
 }
 .fact-card::after {
   content: "";

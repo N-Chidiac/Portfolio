@@ -2,6 +2,10 @@
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeader from "@/components/TheHeader.vue";
 import TheButton from "@/components/TheButton.vue";
+import TheImage from "@/components/TheImage.vue";
+import painterImage from "@/assets/about-me/painter.webp";
+import profileImg from "@/assets/about-me/profile-img.webp";
+import paintPaletteImage from "@/assets/about-me/paint-pallete.webp";
 </script>
 
 <template>
@@ -15,11 +19,11 @@ import TheButton from "@/components/TheButton.vue";
   <main>
     <section class="background">
       <div class="img-container">
-        <img
-          src="../assets/about-me/painter.webp"
+        <TheImage
+          :src="painterImage"
           alt="Image of hand pinting wall"
-          loading="lazy"
-          decoding="async"
+          ratio="360/460"
+          class="about-media"
         />
       </div>
       <div class="text-container">
@@ -58,11 +62,11 @@ import TheButton from "@/components/TheButton.vue";
       </div>
     </section>
     <section class="profile-img">
-      <img
-        src="../assets/about-me/profile-img.webp"
+      <TheImage
+        :src="profileImg"
         alt="profile image of me"
-        loading="lazy"
-        decoding="async"
+        ratio="1200/460"
+        class="about-media"
       />
     </section>
     <section class="hobbies-interests">
@@ -92,11 +96,11 @@ import TheButton from "@/components/TheButton.vue";
         </div>
       </div>
       <div class="img-container">
-        <img
-          src="../assets/about-me/paint-pallete.webp"
+        <TheImage
+          :src="paintPaletteImage"
           alt="image of a paint pallette"
-          loading="lazy"
-          decoding="async"
+          ratio="360/460"
+          class="about-media"
         />
       </div>
     </section>
@@ -115,12 +119,9 @@ import TheButton from "@/components/TheButton.vue";
   margin: 100px;
 }
 
-.img-container img,
-.profile-img img {
+.about-media {
   width: 100%;
   max-width: 1200px;
-  height: auto;
-  object-fit: cover;
 }
 
 .text-container {

@@ -1,4 +1,6 @@
 <script setup>
+import TheImage from "@/components/TheImage.vue";
+
 defineProps({
   id: {
     type: Number,
@@ -22,7 +24,7 @@ defineProps({
 <template>
   <RouterLink :to="`/project/${id}`" class="card-link">
     <div class="project-card">
-      <img :src="image" :alt="title" class="card-image" loading="lazy" decoding="async" />
+      <TheImage :src="image" :alt="title" ratio="360/460" class="card-image" />
       <div class="card-content">
         <h3 class="card-title">{{ title }}</h3>
         <p class="card-subtitle">{{ subtitle }}</p>
@@ -54,8 +56,6 @@ defineProps({
 .card-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .card-content {
