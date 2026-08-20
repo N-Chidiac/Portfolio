@@ -63,6 +63,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
+  justify-content: center;
 }
 .project-card:hover {
   box-shadow: 4px 4px 8px #4e765d;
