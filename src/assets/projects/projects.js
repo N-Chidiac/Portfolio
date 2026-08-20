@@ -497,7 +497,7 @@ export const projects = [
   {
     id: 17,
     name: "Transferlijst Kleurtool",
-    image: "./projects/bulk-overvoer.png",
+    image: "./projects/bulk-overvoer.webp",
     description: [
       "Voor dit project ontwikkelde ik een lichte, volledig client-side webapplicatie waarmee een geplakte Excel-transferlijst automatisch wordt ingekleurd en opnieuw gedownload kan worden als .xlsx-bestand, gebouwd tijdens een studentenjob bij Polymer Contractors. Gebruikers plakken een celbereik rechtstreeks uit Excel, waarna een reeks bedrijfsregels per rij bepaalt welke kleur en welk label toegekend wordt.",
       "De focus lag op een eenvoudige maar robuuste Vue 3-applicatie zonder backend of database: alle parsing, kleurlogica en het opnieuw opbouwen van het Excel-bestand (met exceljs) gebeurt volledig in de browser, met Pinia om het laatst verwerkte resultaat tijdelijk bij te houden. Doordat er niets in localStorage bewaard blijft, is er nooit een verouderde lijst die blijft rondslingeren.",
@@ -528,7 +528,7 @@ export const projects = [
   {
     id: 18,
     name: "Shiftplanning & Verlofsysteem",
-    image: "./projects/planning.png",
+    image: "./projects/planning.webp",
     description: [
       "Voor dit project ontwikkelde ik een webapplicatie voor het opmaken en raadplegen van shiftplanning en het beheren van verlof- en recup-aanvragen, gebouwd tijdens een studentenjob bij Polymer Contractors. De applicatie werkt met twee rollen: medewerkers kunnen de planning raadplegen en verlof/recup aanvragen, terwijl admins de planning opmaken en werknemers en verlofaanvragen beheren.",
       "De focus lag op een volledige full-stack applicatie met Vue 3 (Composition API), Vue Router en Pinia aan de frontend, en Node.js/Express met een SQLite/Turso-database aan de backend. Ik werkte met JWT-authenticatie, PDF-export (weekplanning, verlofbewijs, verlofoverzicht) via jsPDF, en een testsuite met Vitest voor de belangrijkste logica, aangevuld met een CI-pipeline die bij elke push lint, tests en build uitvoert.",
@@ -559,7 +559,7 @@ export const projects = [
   {
     id: 19,
     name: "Rondgangen &\nKPI-controles",
-    image: "./projects/rondgangen.png",
+    image: "./projects/rondgangen.webp",
     description: [
       "Voor dit project ontwikkelde ik een webapplicatie voor het uitvoeren en bijhouden van rondgang-controles (KPI-formulieren), gebouwd tijdens een studentenjob bij Polymer Contractors. Een rondgang wordt ter plekke ingevuld, inclusief foto's per controlepunt die rechtstreeks met de camera gemaakt of geüpload kunnen worden, en wordt bij het versturen automatisch omgezet naar een PDF-rapport.",
       "De focus lag op een volledige full-stack applicatie met Vue 3 aan de frontend en Node.js/Express met een SQLite/Turso-database aan de backend. Nieuwe formuliertypes met eigen controlepunten kunnen door een admin aangemaakt worden zonder dat daar code voor nodig is, waardoor de applicatie voor meerdere soorten controles herbruikbaar is, en niet enkel voor het formulier waarvoor ze oorspronkelijk gebouwd werd.",
@@ -590,7 +590,7 @@ export const projects = [
   {
     id: 20,
     name: "Stockbeheer & Voorraadoverzicht",
-    image: "./projects/stock-beheer.png",
+    image: "./projects/stock-beheer.webp",
     description: [
       "Voor dit project ontwikkelde ik een volledig client-side Vue 3-applicatie om twee Excel-exports (fysieke voorraad en opslaglocaties) in te lezen en daaruit automatisch een reeks overzichten te berekenen, gebouwd tijdens een studentenjob bij Polymer Contractors: restpaletten, lege locaties, quality block, retourzones en locaties met een te laag gewicht.",
       "De focus lag op robuuste Excel-parsing (met SheetJS) die kolomnamen hoofdletter- en spatie-ongevoelig herkent en duidelijk waarschuwt bij ontbrekende of foutieve data, en op het centraliseren van alle bedrijfsregels (paletgewichten, quality-block-codes, uitsluitingslijsten) in één configuratiebestand zodat wijzigingen niet verspreid over de codebase moeten gebeuren. Pinia houdt de geüploade data bij via sessionStorage, zodat die een paginaherlaad overleeft.",
@@ -621,7 +621,7 @@ export const projects = [
   {
     id: 21,
     name: "Storingsoverzicht & Meldsysteem",
-    image: "./projects/storing.png",
+    image: "./projects/storing.webp",
     description: [
       "Voor dit project ontwikkelde ik een digitale vervanging van een papieren storingsblad, gebouwd tijdens een studentenjob bij Polymer Contractors: een QR-code opent een publiek meldingsformulier in vier stappen (naam/volgnummer → machine(s) → onderdelen → details en foto's), terwijl een apart admin-only archief overzicht, filters, bewerk- en exportmogelijkheden en een trends- en rapportagepagina biedt.",
       "De focus lag op een volledige full-stack applicatie met Vue 3, Vue Router en Pinia aan de frontend, en Node.js/Express met een SQLite/Turso-database aan de backend, aangevuld met JWT-authenticatie voor het admin-gedeelte en rate limiting op de publieke endpoints. De applicatie is beschikbaar in het Nederlands en Engels, installeerbaar als PWA, en genereert zowel per-melding als maandelijkse PDF-rapporten via jsPDF.",
@@ -647,6 +647,37 @@ export const projects = [
       database: true,
       docker: false,
       jwt: true,
+    },
+  },
+  {
+    id: 22,
+    name: "Pendel Verpakt",
+    image: "./projects/pendel-verpakt.webp",
+    description: [
+      "Voor dit project ontwikkelde ik een digitale applicatie voor het verwerken van pendeltransport, gebouwd tijdens een studentenjob bij Polymer Contractors. De gebruiker uploadt een SAP EWM \"Warehouse Task\"-export (Excel), waarna de app de rijen automatisch groepeert tot ritten op basis van laadgewicht en bronlocatie, en daarmee een \"checkblad overvoer\" invult dat rechtstreeks in de browser bekeken, handmatig bijgestuurd en als Excel-bestand gedownload kan worden.",
+      "De focus lag op een volledig client-side Vue 3-applicatie met Pinia voor state management, zonder backend: alle Excel-parsing, ritberekening en het stijlgetrouw opnieuw opbouwen van het checkblad-sjabloon (met exceljs) gebeurt in de browser. Wijzigingen en het ingelezen bestand blijven bewaard via sessionStorage, zodat een paginaherlaad geen data verliest, en een in-app bevestigingsdialoog vervangt het standaard browser-confirm-venster.",
+      "Dit project leerde me hoe je een niet-triviaal verdeel-/puzzelalgoritme bouwt dat rijen zo compact mogelijk over ritten verdeelt zonder een bronlocatie over niet-aaneengesloten ritten te spreiden, met aandacht voor randgevallen zoals gezamenlijke (gemengde) ritten, opgesplitste rijen en afwijkende of onvolledige ritten die als waarschuwing gesignaleerd worden.",
+    ],
+    type: "Student job project",
+    github: "",
+    date: "20-08-2026",
+    tech: {
+      html: true,
+      css: true,
+      javascript: true,
+      vue: true,
+      nodejs: false,
+      vscode: true,
+      npm: true,
+      figma: false,
+      illustrator: false,
+      photoshop: false,
+      vite: true,
+      pinia: true,
+      express: false,
+      database: false,
+      docker: false,
+      jwt: false,
     },
   },
 ];
