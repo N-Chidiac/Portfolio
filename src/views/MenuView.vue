@@ -15,10 +15,12 @@ function close() {
   <div class="wrapper">
     <div class="logo"></div>
 
-    <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" @click="close">
-      <line x1="0" y1="0" x2="24" y2="24" stroke="currentColor" stroke-width="2" />
-      <line x1="24" y1="0" x2="0" y2="24" stroke="currentColor" stroke-width="2" />
-    </svg>
+    <button type="button" class="close" aria-label="Menu sluiten" @click="close">
+      <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <line x1="0" y1="0" x2="24" y2="24" stroke="currentColor" stroke-width="2" />
+        <line x1="24" y1="0" x2="0" y2="24" stroke="currentColor" stroke-width="2" />
+      </svg>
+    </button>
 
     <div class="sidebar">
       <h4 class="menu-label">MENU</h4>
@@ -71,14 +73,25 @@ function close() {
 
 .close {
   position: absolute;
-  top: 130px;
-  right: 300px;
-  width: 24px;
-  height: 24px;
+  top: 50px;
+  right: 60px;
+  width: 68px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
+  background: none;
+  border: none;
+  padding: 0;
   cursor: pointer;
   color: var(--white);
   transition: color 0.2s ease;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .close:hover {
@@ -171,8 +184,8 @@ h4 {
   }
 
   .close {
-    top: 30px;
-    right: 30px;
+    top: 35px;
+    right: 40px;
   }
 }
 @media (max-width: 768px) {
@@ -209,10 +222,14 @@ h4 {
   .nav-and-socials {
     gap: 30px;
   }
+}
 
+@media (max-width: 640px) {
   .close {
-    top: 30px;
-    right: 30px;
+    top: 24px;
+    right: 24px;
+    width: 33px;
+    height: 28px;
   }
 }
 </style>
