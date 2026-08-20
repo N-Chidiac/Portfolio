@@ -187,6 +187,10 @@ p {
     flex-direction: column;
   }
 
+  .img-container {
+    width: 100%;
+  }
+
   .hobbies-interests .img-container {
     order: -1;
   }
