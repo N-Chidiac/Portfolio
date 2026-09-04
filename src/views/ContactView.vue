@@ -66,11 +66,6 @@ import TheHeader from "@/components/TheHeader.vue";
 
             <div class="divider"></div>
 
-            <div class="status">
-              <span class="dot"></span>
-              <p><strong>Beschikbaar voor stage</strong></p>
-            </div>
-
             <div class="response-time">
               <p>Ik antwoord meestal binnen 24 uur!</p>
             </div>
@@ -245,39 +240,6 @@ import TheHeader from "@/components/TheHeader.vue";
   margin: 1.75rem 0;
 }
 
-.status {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  font-family: var(--body-font);
-}
-
-.status strong {
-  color: var(--white);
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background: #4ade80;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.25);
-  flex-shrink: 0;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.25);
-  }
-  50% {
-    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0.1);
-  }
-}
-
 .response-time {
   display: flex;
   align-items: center;
@@ -331,13 +293,14 @@ import TheHeader from "@/components/TheHeader.vue";
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .contact-wrapper {
     padding: 56px 24px 64px;
   }
 
   .contact-container {
     flex-direction: column;
+    align-items: stretch;
     gap: 2.5rem;
   }
 

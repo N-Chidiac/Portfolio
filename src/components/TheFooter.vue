@@ -118,4 +118,16 @@
     width: 150px;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links {
+    flex-direction: row;
+  }
+}
 </style>

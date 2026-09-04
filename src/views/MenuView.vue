@@ -198,10 +198,11 @@ h4 {
   }
 
   .sidebar {
-    width: fit-content;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: auto;
+    left: 24px;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .menu-label {
@@ -211,16 +212,16 @@ h4 {
   }
 
   .links h1 {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1;
   }
 
   .links {
-    gap: 20px;
+    gap: 14px;
   }
 
   .nav-and-socials {
-    gap: 30px;
+    gap: 24px;
   }
 }
 
@@ -230,6 +231,19 @@ h4 {
     right: 24px;
     width: 33px;
     height: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .links h1 {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue";
+import { computed, onMounted, onUnmounted, ref } from "vue";
 import TheButton from "@/components/TheButton.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeader from "@/components/TheHeader.vue";
@@ -38,6 +38,19 @@ function parseProjectDate(date) {
   return new Date(year, month - 1, day);
 }
 
+const viewportWidth = ref(window.innerWidth);
+
+function updateViewportWidth() {
+  viewportWidth.value = window.innerWidth;
+}
+
+onMounted(() => window.addEventListener("resize", updateViewportWidth));
+onUnmounted(() => window.removeEventListener("resize", updateViewportWidth));
+
+const recentProjectsCount = computed(() =>
+  viewportWidth.value > 768 && viewportWidth.value <= 1024 ? 2 : 3,
+);
+
 const recentProjects = computed(() =>
   [...projects]
     .sort((a, b) => {
@@ -45,7 +58,7 @@ const recentProjects = computed(() =>
       if (dateDiff !== 0) return dateDiff;
       return b.id - a.id;
     })
-    .slice(0, 3),
+    .slice(0, recentProjectsCount.value),
 );
 </script>
 
@@ -127,6 +140,7 @@ const recentProjects = computed(() =>
             :id="project.id"
             :title="project.name"
             :subtitle="project.type"
+            :description="project.description[0]"
             :image="getImage(project.image)"
             class="project-card"
           />
@@ -180,7 +194,7 @@ main {
 .skill-box {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .buttons {
@@ -200,7 +214,6 @@ main {
 .row {
   display: flex;
   gap: 20px;
-  margin-bottom: 12px;
 }
 p {
   font-family: var(--body-font);
@@ -241,9 +254,6 @@ p {
   gap: 60px;
   justify-content: center;
 }
-.project-card:hover {
-  box-shadow: 4px 4px 8px #4e765d;
-}
 
 @media (max-width: 1024px) {
   main {
@@ -265,7 +275,7 @@ p {
   .row {
     flex-wrap: wrap;
     gap: 14px;
-    margin-bottom: 0;
+    justify-content: center;
   }
 
   .recent-projects {
@@ -320,6 +330,13 @@ p {
 
   .projects-grid {
     gap: 24px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .recent-projects :deep(.project-card) {
+    width: 330px;
+    height: 422px;
   }
 }
 </style>

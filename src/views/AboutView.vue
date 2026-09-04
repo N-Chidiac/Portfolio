@@ -207,5 +207,34 @@ p {
     flex-direction: column;
     margin-top: 30px;
   }
+
+  .btn a {
+    width: 100%;
+  }
+
+  .btn :deep(button) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .background,
+  .hobbies-interests {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .hobbies-interests .img-container {
+    order: 0;
+  }
+
+  .img-container {
+    width: auto;
+  }
+
+  .btn {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 </style>

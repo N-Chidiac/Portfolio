@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue";
+import { computed, watch } from "vue";
 import { useRoute } from "vue-router";
 import TheHeader from "@/components/TheHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
@@ -9,6 +9,43 @@ import TheImage from "@/components/TheImage.vue";
 
 const route = useRoute();
 const project = computed(() => projects.find((p) => p.id === Number(route.params.id)));
+
+function parseProjectDate(date) {
+  const [day, month, year] = date.split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
+
+const sortedProjects = computed(() =>
+  [...projects].sort((a, b) => {
+    const dateDiff = parseProjectDate(b.date) - parseProjectDate(a.date);
+    if (dateDiff !== 0) return dateDiff;
+    return b.id - a.id;
+  }),
+);
+
+const currentIndex = computed(() =>
+  sortedProjects.value.findIndex((p) => p.id === project.value?.id),
+);
+
+const previousProject = computed(() =>
+  currentIndex.value > 0 ? sortedProjects.value[currentIndex.value - 1] : null,
+);
+
+const nextProject = computed(() =>
+  currentIndex.value !== -1 && currentIndex.value < sortedProjects.value.length - 1
+    ? sortedProjects.value[currentIndex.value + 1]
+    : null,
+);
+
+watch(
+  project,
+  (currentProject) => {
+    document.title = currentProject
+      ? `${currentProject.name.replace(/\n/g, " ")} — Nour Chidiac`
+      : "Project niet gevonden — Nour Chidiac";
+  },
+  { immediate: true },
+);
 
 const projectImages = import.meta.glob("@/assets/projects/*", { eager: true });
 function getImage(path) {
@@ -108,6 +145,42 @@ const usedSkills = computed(() =>
             </RouterLink>
           </li>
         </ul>
+
+        <div class="project-pagination">
+          <RouterLink
+            v-if="previousProject"
+            :to="`/project/${previousProject.id}`"
+            class="page-link prev"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Vorige</span>
+          </RouterLink>
+          <RouterLink v-if="nextProject" :to="`/project/${nextProject.id}`" class="page-link next">
+            <span>Volgende</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </RouterLink>
+        </div>
+
         <TheButton text="All projects" color="#4e765d" path="/projects" class="back-btn" />
       </div>
     </div>
@@ -253,6 +326,38 @@ li a:hover {
   object-fit: contain;
 }
 
+.project-pagination {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-family: var(--subtitle-font);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.page-link:hover {
+  color: var(--accent-color);
+}
+
+.page-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.page-link.next {
+  margin-left: auto;
+}
+
 @media (max-width: 1024px) {
   main {
     padding: 48px 40px;
@@ -308,6 +413,15 @@ li a:hover {
   .links li a:visited {
     width: 100%;
     min-width: 0;
+  }
+
+  .back-btn {
+    display: block;
+    width: 100%;
+  }
+
+  .back-btn :deep(button) {
+    width: 100%;
   }
 }
 </style>
