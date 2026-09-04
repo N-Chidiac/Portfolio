@@ -26,6 +26,19 @@ body {
   background-color: var(--primary-color);
 }
 
+html {
+  scrollbar-color: var(--accent-color) var(--secondary-color);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 8px;
+}
+
 html,
 body,
 #app {
