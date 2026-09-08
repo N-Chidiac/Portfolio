@@ -1,0 +1,15 @@
+# Redirect de kale root naar de echte landingspagina, en serveer voor alle
+# overige onbekende paden de SPA-shell (zodat deeplinks als /project/15 niet
+# hard 404'en). Statische bestanden — ook de per-route index.html's uit
+# scripts/prerender.mjs — worden altijd eerst geserveerd, vóór deze regels.
+
+[[redirects]]
+  from = "/"
+  to = "/home"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

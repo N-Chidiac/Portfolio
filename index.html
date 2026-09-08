@@ -9,7 +9,8 @@
       name="description"
       content="Portfolio van Nour Chidiac, junior web developer. Projecten, vaardigheden en contactinfo."
     />
-    <link rel="canonical" href="https://nourchidiac.netlify.app/" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nourchidiac.netlify.app/home" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Nour Chidiac" />
@@ -18,7 +19,7 @@
       property="og:description"
       content="Portfolio van Nour Chidiac, junior web developer. Projecten, vaardigheden en contactinfo."
     />
-    <meta property="og:url" content="https://nourchidiac.netlify.app/" />
+    <meta property="og:url" content="https://nourchidiac.netlify.app/home" />
     <meta property="og:image" content="https://nourchidiac.netlify.app/favicon.png" />
     <meta property="og:locale" content="nl_BE" />
 
@@ -29,6 +30,33 @@
       content="Portfolio van Nour Chidiac, junior web developer. Projecten, vaardigheden en contactinfo."
     />
     <meta name="twitter:image" content="https://nourchidiac.netlify.app/favicon.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://nourchidiac.netlify.app/#person",
+            "name": "Nour Chidiac",
+            "jobTitle": "Web Developer",
+            "url": "https://nourchidiac.netlify.app/home",
+            "sameAs": [
+              "https://github.com/N-Chidiac",
+              "https://www.linkedin.com/in/nour-chidiac-41632a387/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://nourchidiac.netlify.app/#website",
+            "name": "Nour Chidiac — Portfolio",
+            "url": "https://nourchidiac.netlify.app/home",
+            "inLanguage": "nl-BE",
+            "publisher": { "@id": "https://nourchidiac.netlify.app/#person" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>
