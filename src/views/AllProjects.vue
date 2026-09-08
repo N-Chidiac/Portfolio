@@ -3,28 +3,11 @@ import { computed, onMounted, onUnmounted, ref } from "vue";
 import TheHeader from "@/components/TheHeader.vue";
 import TheProjectCard from "@/components/TheProjectCard.vue";
 import { projects } from "@/assets/projects/projects";
+import { getProjectImage, sortByDateDesc } from "@/utils/projects";
 import TheButton from "@/components/TheButton.vue";
 import TheFooter from "@/components/TheFooter.vue";
 
-const images = import.meta.glob("@/assets/projects/*", { eager: true });
-
-function getImage(path) {
-  const key = path.replace("./projects/", "/src/assets/projects/");
-  return images[key]?.default;
-}
-
-function parseProjectDate(date) {
-  const [day, month, year] = date.split("-").map(Number);
-  return new Date(year, month - 1, day);
-}
-
-const sortedProjects = computed(() =>
-  [...projects].sort((a, b) => {
-    const dateDiff = parseProjectDate(b.date) - parseProjectDate(a.date);
-    if (dateDiff !== 0) return dateDiff;
-    return b.id - a.id;
-  }),
-);
+const sortedProjects = computed(() => sortByDateDesc(projects));
 
 const filters = [
   { key: "all", label: "Alles" },
@@ -84,7 +67,7 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
         :title="project.name"
         :subtitle="project.type"
         :description="project.description[0]"
-        :image="getImage(project.image)"
+        :image="getProjectImage(project.image)"
         class="project-card"
       />
     </div>
@@ -103,7 +86,14 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
       aria-label="Scroll naar boven"
       @click="scrollToTop"
     >
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
         <line x1="12" y1="19" x2="12" y2="5"></line>
         <polyline points="5 12 12 5 19 12"></polyline>
       </svg>
@@ -143,11 +133,11 @@ main {
 }
 
 .filter-chip:hover {
-  color: var(--accent-color);
+  color: var(--accent-strong);
 }
 
 .filter-chip.active {
-  color: var(--accent-color);
+  color: var(--accent-strong);
   border-bottom-color: var(--accent-color);
 }
 

@@ -1,27 +1,17 @@
 <script setup>
-import { computed, watch } from "vue";
+import { computed } from "vue";
 import { useRoute } from "vue-router";
 import TheHeader from "@/components/TheHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import { projects } from "@/assets/projects/projects";
+import { getProjectImage, sortByDateDesc } from "@/utils/projects";
 import TheButton from "@/components/TheButton.vue";
 import TheImage from "@/components/TheImage.vue";
 
 const route = useRoute();
 const project = computed(() => projects.find((p) => p.id === Number(route.params.id)));
 
-function parseProjectDate(date) {
-  const [day, month, year] = date.split("-").map(Number);
-  return new Date(year, month - 1, day);
-}
-
-const sortedProjects = computed(() =>
-  [...projects].sort((a, b) => {
-    const dateDiff = parseProjectDate(b.date) - parseProjectDate(a.date);
-    if (dateDiff !== 0) return dateDiff;
-    return b.id - a.id;
-  }),
-);
+const sortedProjects = computed(() => sortByDateDesc(projects));
 
 const currentIndex = computed(() =>
   sortedProjects.value.findIndex((p) => p.id === project.value?.id),
@@ -36,22 +26,6 @@ const nextProject = computed(() =>
     ? sortedProjects.value[currentIndex.value + 1]
     : null,
 );
-
-watch(
-  project,
-  (currentProject) => {
-    document.title = currentProject
-      ? `${currentProject.name.replace(/\n/g, " ")} — Nour Chidiac`
-      : "Project niet gevonden — Nour Chidiac";
-  },
-  { immediate: true },
-);
-
-const projectImages = import.meta.glob("@/assets/projects/*", { eager: true });
-function getImage(path) {
-  const key = path.replace("./projects/", "/src/assets/projects/");
-  return projectImages[key]?.default;
-}
 
 const skillImages = import.meta.glob("@/assets/Homepage/*", { eager: true });
 function getSkillImage(name) {
@@ -79,11 +53,7 @@ const skillMap = {
 };
 
 const usedSkills = computed(() =>
-  project.value
-    ? Object.entries(project.value.tech)
-        .filter(([, used]) => used)
-        .map(([key]) => skillMap[key])
-    : [],
+  project.value ? project.value.tech.map((key) => skillMap[key]).filter(Boolean) : [],
 );
 </script>
 
@@ -106,7 +76,7 @@ const usedSkills = computed(() =>
             </div>
           </div>
           <TheImage
-            :src="getImage(project.image)"
+            :src="getProjectImage(project.image)"
             :alt="project.name"
             ratio="360/460"
             loading="eager"
@@ -137,9 +107,7 @@ const usedSkills = computed(() =>
           </svg>
           <span>
             Deze applicatie is in productie bij Polymer Contractors en draait in hun interne
-            omgeving. De broncode en de live-omgeving zijn daarom niet publiek beschikbaar. Tijdens
-            een gesprek geef ik graag een rondleiding door de code, de architectuur en de
-            testopzet.
+            omgeving. De broncode en de live-omgeving zijn daarom niet publiek beschikbaar.
           </span>
         </p>
 
@@ -391,7 +359,7 @@ li a:hover {
 }
 
 .page-link:hover {
-  color: var(--accent-color);
+  color: var(--accent-strong);
 }
 
 .page-link svg {

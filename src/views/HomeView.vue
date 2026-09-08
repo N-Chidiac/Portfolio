@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, onUnmounted, ref } from "vue";
+import { computed } from "vue";
 import TheButton from "@/components/TheButton.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeader from "@/components/TheHeader.vue";
@@ -7,6 +7,7 @@ import TheProjectCard from "@/components/TheProjectCard.vue";
 import TheSkill from "@/components/TheSkill.vue";
 import TheImage from "@/components/TheImage.vue";
 import { projects } from "@/assets/projects/projects";
+import { getProjectImage, sortByDateDesc } from "@/utils/projects";
 
 import profileImage from "@/assets/Homepage/about-me-homepage.webp";
 import html from "@/assets/Homepage/HTML5-s.svg";
@@ -26,40 +27,9 @@ import sqlite from "@/assets/Homepage/SQLite.svg";
 import docker from "@/assets/Homepage/Docker.svg";
 import jwt from "@/assets/Homepage/JWT.svg";
 
-const projectImages = import.meta.glob("@/assets/projects/*", { eager: true });
-
-function getImage(path) {
-  const key = path.replace("./projects/", "/src/assets/projects/");
-  return projectImages[key]?.default;
-}
-
-function parseProjectDate(date) {
-  const [day, month, year] = date.split("-").map(Number);
-  return new Date(year, month - 1, day);
-}
-
-const viewportWidth = ref(window.innerWidth);
-
-function updateViewportWidth() {
-  viewportWidth.value = window.innerWidth;
-}
-
-onMounted(() => window.addEventListener("resize", updateViewportWidth));
-onUnmounted(() => window.removeEventListener("resize", updateViewportWidth));
-
-const recentProjectsCount = computed(() =>
-  viewportWidth.value > 768 && viewportWidth.value <= 1024 ? 2 : 3,
-);
-
-const recentProjects = computed(() =>
-  [...projects]
-    .sort((a, b) => {
-      const dateDiff = parseProjectDate(b.date) - parseProjectDate(a.date);
-      if (dateDiff !== 0) return dateDiff;
-      return b.id - a.id;
-    })
-    .slice(0, recentProjectsCount.value),
-);
+// Toon de drie recentste projecten. Op tabletbreedte (769–1024px) verbergt de
+// CSS de derde kaart, zodat de rij netjes blijft zonder een resize-listener.
+const recentProjects = computed(() => sortByDateDesc(projects).slice(0, 3));
 </script>
 
 <template>
@@ -135,14 +105,14 @@ const recentProjects = computed(() =>
         </div>
         <div class="projects-grid">
           <TheProjectCard
-            v-for="project in recentProjects"
+            v-for="(project, index) in recentProjects"
             :key="project.id"
             :id="project.id"
             :title="project.name"
             :subtitle="project.type"
             :description="project.description[0]"
-            :image="getImage(project.image)"
-            class="project-card"
+            :image="getProjectImage(project.image)"
+            :class="['project-card', { 'is-tablet-hidden': index === 2 }]"
           />
         </div>
       </div>
@@ -337,6 +307,10 @@ p {
   .recent-projects :deep(.project-card) {
     width: 330px;
     height: 422px;
+  }
+
+  .recent-projects :deep(.is-tablet-hidden) {
+    display: none;
   }
 }
 </style>
