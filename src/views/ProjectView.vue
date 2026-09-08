@@ -122,6 +122,27 @@ const usedSkills = computed(() =>
           {{ paragraph }}
         </p>
 
+        <p v-if="project.confidential" class="confidential-note">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          <span>
+            Deze applicatie is in productie bij Polymer Contractors en draait in hun interne
+            omgeving. De broncode en de live-omgeving zijn daarom niet publiek beschikbaar. Tijdens
+            een gesprek geef ik graag een rondleiding door de code, de architectuur en de
+            testopzet.
+          </span>
+        </p>
+
         <ul class="links">
           <li v-if="project.github">
             <a :href="project.github" target="_blank">
@@ -269,6 +290,30 @@ main {
   font-weight: 400;
   line-height: 100%;
   max-width: 720px;
+}
+
+.confidential-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  max-width: 720px;
+  margin: 20px 0 4px;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-left: 3px solid var(--accent-color);
+  border-radius: 20px 0 20px 0;
+  font-family: var(--body-font);
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--secondary-color);
+}
+
+.confidential-note svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--accent-color);
 }
 
 .links {

@@ -382,6 +382,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "30-07-2026",
     tech: {
       html: true,
@@ -413,6 +414,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "30-07-2026",
     tech: {
       html: true,
@@ -444,6 +446,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "30-07-2026",
     tech: {
       html: true,
@@ -474,6 +477,7 @@ export const projects = [
       "Ook hier ervoer ik hoe je een applicatie bouwt die écht op de werkvloer gebruikt wordt. Na de lancering bleef ik itereren op basis van feedback van de gebruikers zelf, wat me veel inzicht gaf in werken met echte requirements en productieomstandigheden.",
     ],
     type: "Student job project",
+    confidential: true,
     date: "30-07-2026",
     tech: {
       html: true,
@@ -505,6 +509,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "13-08-2026",
     tech: {
       html: true,
@@ -536,6 +541,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "12-08-2026",
     tech: {
       html: true,
@@ -567,6 +573,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "13-08-2026",
     tech: {
       html: true,
@@ -598,6 +605,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "13-08-2026",
     tech: {
       html: true,
@@ -629,6 +637,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "14-08-2026",
     tech: {
       html: true,
@@ -660,6 +669,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "20-08-2026",
     tech: {
       html: true,
@@ -691,6 +701,7 @@ export const projects = [
     ],
     type: "Student job project",
     github: "",
+    confidential: true,
     date: "04-09-2026",
     tech: {
       html: true,
@@ -709,6 +720,38 @@ export const projects = [
       database: true,
       docker: false,
       jwt: true,
+    },
+  },
+  {
+    id: 24,
+    name: "Intern Applicatieportaal",
+    image: "./projects/dashboard.webp",
+    description: [
+      "De interne systemen die ik bij Polymer Contractors bouwde, raakten verspreid over evenveel losse links — dit dashboard brengt ze samen op één startpagina. Elke applicatie verschijnt als een kaart, gegroepeerd in drie domeinen (controle & inspectie, magazijn & goederenstroom, en werk & organisatie), en opent met één klik in een nieuw tabblad. Een zoekbalk filtert de kaarten op naam, omschrijving en jargon zoals 'verlof' of 'DN-nummer', en per kaart tonen labels of je moet aanmelden en of de applicatie traag kan opstarten.",
+      "Het is een volledig client-side Vue 3-applicatie (Composition API) met Vue Router en Pinia, zonder backend of database: de volledige lijst applicaties, hun links en zoektermen staan in één configuratiebestand. Ik voorzag sneltoetsen om meteen te zoeken of een applicatie per cijfer te openen, skeleton loaders die 'prefers-reduced-motion' respecteren, een handleidingenpagina waar alle PDF-handleidingen per domein gebundeld en als ZIP te downloaden zijn, en aparte privacy-, cookie- en 404-pagina's. De deploy draait op Netlify met een SPA-fallback.",
+      "Vooral leerde ik hier hoeveel waarde een centrale toegangspoort heeft wanneer een reeks losstaande tools samen een geheel moet vormen: een consistente huisstijl, herkenbare kaarten en labels die realistische verwachtingen scheppen, zoals de koude start van een gratis hostingtier. Daarnaast was het een oefening in bewust minimalisme — geen accounts, geen opslag, geen tracking, enkel een vaste lijst links — zodat de pagina zelf nooit een onderhoudslast of veiligheidsrisico wordt.",
+    ],
+    type: "Student job project",
+    github: "",
+    confidential: true,
+    date: "08-09-2026",
+    tech: {
+      html: true,
+      css: true,
+      javascript: true,
+      vue: true,
+      nodejs: false,
+      vscode: true,
+      npm: true,
+      figma: false,
+      illustrator: false,
+      photoshop: false,
+      vite: true,
+      pinia: true,
+      express: false,
+      database: false,
+      docker: false,
+      jwt: false,
     },
   },
 ];
