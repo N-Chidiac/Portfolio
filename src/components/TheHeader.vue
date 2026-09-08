@@ -2,11 +2,13 @@
   <header>
     <div class="nav">
       <RouterLink to="/home"
-        ><img src="../assets/Header/Logo-wit-header.png" alt="Logo" /></RouterLink
-      ><RouterLink to="/"><img src="../assets/Header/menu.svg" alt="Logo" /></RouterLink>
+        ><img
+          src="../assets/Header/Logo-wit-header.png"
+          alt="Nour Chidiac — naar de startpagina" /></RouterLink
+      ><RouterLink to="/menu"><img src="../assets/Header/menu.svg" alt="Menu openen" /></RouterLink>
     </div>
     <div class="hero">
-      <img src="../assets/Header/Logo-grijs-header.png" alt="Logo" class="hero-logo" />
+      <img src="../assets/Header/Logo-grijs-header.png" alt="" class="hero-logo" />
       <div class="title-container">
         <div class="title">
           <h1><slot name="title"></slot></h1>

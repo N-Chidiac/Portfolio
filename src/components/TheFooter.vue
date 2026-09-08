@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="logo">
-      <img src="../assets/Header/Logo-wit-header.png" alt="Logo" />
+      <img src="../assets/Header/Logo-wit-header.png" alt="" />
     </div>
   </div>
 </template>

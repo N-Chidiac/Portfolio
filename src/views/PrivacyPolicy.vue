@@ -320,7 +320,7 @@ import TheHeader from "@/components/TheHeader.vue";
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--accent-strong);
   text-decoration: none;
   font-weight: 700;
   transition: opacity 0.2s;

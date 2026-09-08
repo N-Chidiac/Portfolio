@@ -1,5 +1,7 @@
 <script setup>
-defineProps({
+import { useRouter } from "vue-router";
+
+const props = defineProps({
   text: {
     type: String,
     default: "Click me",
@@ -17,15 +19,27 @@ defineProps({
     default: null,
   },
 });
+
+const router = useRouter();
+
+// Eén <button>-element in plaats van een <button> genest in een <a>/<RouterLink>
+// (ongeldige HTML). Navigatie en download gaan nu via de klik-handler.
+function handleClick() {
+  if (props.download) {
+    const link = document.createElement("a");
+    link.href = props.path;
+    link.download = props.download;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    return;
+  }
+  router.push(props.path);
+}
 </script>
 
 <template>
-  <a v-if="download" :href="path" :download="download">
-    <button :style="{ backgroundColor: color }">{{ text }}</button>
-  </a>
-  <RouterLink v-else :to="path">
-    <button :style="{ backgroundColor: color }">{{ text }}</button>
-  </RouterLink>
+  <button type="button" :style="{ backgroundColor: color }" @click="handleClick">{{ text }}</button>
 </template>
 <style scoped>
 button {

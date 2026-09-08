@@ -13,6 +13,7 @@ function close() {
 </script>
 <template>
   <div class="wrapper">
+    <h1 class="sr-only">Menu</h1>
     <div class="logo"></div>
 
     <button type="button" class="close" aria-label="Menu sluiten" @click="close">
@@ -26,11 +27,11 @@ function close() {
       <h4 class="menu-label">MENU</h4>
       <div class="nav-and-socials">
         <nav class="links">
-          <RouterLink to="/home"><h1>HOME</h1></RouterLink>
-          <RouterLink to="/about"><h1>ABOUT</h1></RouterLink>
-          <RouterLink to="/facts"><h1>FUN FACTS</h1></RouterLink>
-          <RouterLink to="/projects"><h1>PROJECTS</h1></RouterLink>
-          <RouterLink to="/contact"><h1>CONTACT</h1></RouterLink>
+          <RouterLink to="/home"><span class="link-text">HOME</span></RouterLink>
+          <RouterLink to="/about"><span class="link-text">ABOUT</span></RouterLink>
+          <RouterLink to="/facts"><span class="link-text">FUN FACTS</span></RouterLink>
+          <RouterLink to="/projects"><span class="link-text">PROJECTS</span></RouterLink>
+          <RouterLink to="/contact"><span class="link-text">CONTACT</span></RouterLink>
         </nav>
         <div class="socials">
           <a href="https://github.com/N-Chidiac" target="_blank">
@@ -149,7 +150,8 @@ h4 {
   }
 }
 
-.links h1 {
+.links .link-text {
+  display: block;
   margin: 0;
   line-height: 100%;
   font-size: 64px;
@@ -179,7 +181,7 @@ h4 {
     left: 48%;
     transform: translateX(-50%);
   }
-  .links h1 {
+  .links .link-text {
     font-size: 56px;
   }
 
@@ -211,7 +213,7 @@ h4 {
     left: -2rem;
   }
 
-  .links h1 {
+  .links .link-text {
     font-size: 40px;
     line-height: 1;
   }
@@ -235,7 +237,7 @@ h4 {
 }
 
 @media (max-width: 400px) {
-  .links h1 {
+  .links .link-text {
     font-size: 34px;
   }
 }

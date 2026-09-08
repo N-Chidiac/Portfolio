@@ -1,6 +1,13 @@
 <script setup>
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeader from "@/components/TheHeader.vue";
+
+const EMAIL = "nour.chidiac@hotmail.com";
+// Onderwerp en aanhef voorinvullen: makkelijker triëren en een lagere drempel
+// dan een leeg mailvenster.
+const mailtoHref = `mailto:${EMAIL}?subject=${encodeURIComponent(
+  "Contact via portfolio",
+)}&body=${encodeURIComponent("Hallo Nour,\n\n")}`;
 </script>
 
 <template>
@@ -17,7 +24,7 @@ import TheHeader from "@/components/TheHeader.vue";
         <div class="contact-left">
           <div class="section-label">CONTACTEER MIJ VIA</div>
 
-          <a href="mailto:nour.chidiac@hotmail.com" class="contact-card">
+          <a :href="mailtoHref" class="contact-card">
             <div class="icon-wrapper email">
               <span><img src="../assets/menu/contact-black.svg" alt="contact button" /></span>
             </div>
@@ -78,7 +85,7 @@ import TheHeader from "@/components/TheHeader.vue";
             </p>
 
             <div class="right-btn">
-              <a href="mailto:nour.chidiac@hotmail.com" class="mail-btn">Email me</a>
+              <a :href="mailtoHref" class="mail-btn">Email me</a>
             </div>
           </div>
 
@@ -129,7 +136,7 @@ import TheHeader from "@/components/TheHeader.vue";
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0%;
-  color: var(--accent-color);
+  color: var(--accent-strong);
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
@@ -184,7 +191,7 @@ import TheHeader from "@/components/TheHeader.vue";
 
 .value {
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--accent-strong);
   font-size: 0.95rem;
   letter-spacing: 0.02em;
 }
@@ -287,10 +294,6 @@ import TheHeader from "@/components/TheHeader.vue";
   .contact-container {
     gap: 3rem;
   }
-
-  .watermark {
-    width: 320px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -307,12 +310,6 @@ import TheHeader from "@/components/TheHeader.vue";
   .contact-right {
     max-width: 100%;
   }
-
-  .watermark {
-    width: 240px;
-    bottom: -20px;
-    right: -10px;
-  }
 }
 
 @media (max-width: 640px) {
@@ -326,10 +323,6 @@ import TheHeader from "@/components/TheHeader.vue";
 
   .contact-right h2 {
     font-size: 1.9rem;
-  }
-
-  .watermark {
-    width: 160px;
   }
 }
 </style>

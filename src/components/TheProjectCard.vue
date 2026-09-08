@@ -50,7 +50,12 @@ defineProps({
               <path d="M7 21.9l-4-4 4-4" />
               <path d="M21 11.4v2a4 4 0 0 1-4 4H3" />
             </svg>
-            <svg class="hint-icon hint-touch-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <svg
+              class="hint-icon hint-touch-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              stroke="none"
+            >
               <path
                 d="M9.5 2.8c-.9 0-1.6.7-1.6 1.6v6.1c-.5-.4-1.2-.6-1.9-.4-1 .3-1.6 1.3-1.4 2.3l1.3 5.1c.6 2.4 2.8 4.1 5.3 4.1h1.9c3 0 5.5-2.5 5.5-5.5v-4.6c0-.9-.7-1.6-1.6-1.6-.3 0-.6.1-.8.2-.2-.7-.9-1.2-1.6-1.2-.3 0-.6.1-.9.2-.2-.6-.8-1.1-1.5-1.1-.3 0-.6.1-.8.2V4.4c0-.9-.7-1.6-1.6-1.6z"
               />
@@ -72,7 +77,11 @@ defineProps({
 <style scoped>
 .card-link {
   text-decoration: none;
-  outline: none;
+}
+
+.card-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
 }
 
 .project-card {
